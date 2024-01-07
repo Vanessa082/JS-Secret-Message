@@ -69,7 +69,7 @@ encoder.addEventListener('click', function (){
 
       function pattern(array, column){
         const coded = []
-        for (let i = 0; i < column; i++) {
+        for (let i = 0; i < column; i++){
           let textMain = ''
           array.forEach((re) => {
             textMain += re.slice(i, i + 1)
