@@ -1,4 +1,3 @@
-
 const message = document.querySelector('#message')
 const encoder = document.querySelector('#encoder')
 const err = document.querySelector('#error')
@@ -11,7 +10,7 @@ const refresh = document.querySelector('#refresh')
 message.placeholder = 'Enter your message....'
 encoder.innerHTML = 'Encoder'
 
-encoder.addEventListener('click', function () {
+encoder.addEventListener('click', function (){
   const msg = message.value
   if (!msg) {
     err.innerHTML =
@@ -49,12 +48,12 @@ encoder.addEventListener('click', function () {
       results.innerHTML = resulting
       encodedMsg.innerHTML = read.join('<br/>')
 
-      function normaliseRectangle(column, row, text) {
+      function normaliseRectangle(column, row, text){
         const array = []
         let firstRec = 0
         for (let i = 0; i < row; i++) {
           if (i !== 0) firstRec += column
-          if (text.slice(firstRec, firstRec + column).length === column) {
+          if (text.slice(firstRec, firstRec + column).length === column){
             array.push(text.slice(firstRec, firstRec + column))
           } else {
             // get the remainder as spaces
@@ -68,7 +67,7 @@ encoder.addEventListener('click', function () {
         return array
       }
 
-      function pattern(array, column) {
+      function pattern(array, column){
         const coded = []
         for (let i = 0; i < column; i++) {
           let textMain = ''
