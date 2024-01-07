@@ -51,7 +51,7 @@ encoder.addEventListener('click', function (){
       function normaliseRectangle(column, row, text){
         const array = []
         let firstRec = 0
-        for (let i = 0; i < row; i++) {
+        for (let i = 0; i < row; i++){
           if (i !== 0) firstRec += column
           if (text.slice(firstRec, firstRec + column).length === column){
             array.push(text.slice(firstRec, firstRec + column))
@@ -69,7 +69,7 @@ encoder.addEventListener('click', function (){
 
       function pattern(array, column){
         const coded = []
-        for (let i = 0; i < column; i++){
+        for (let i = 0; i < column; i++) {
           let textMain = ''
           array.forEach((re) => {
             textMain += re.slice(i, i + 1)
@@ -83,6 +83,6 @@ encoder.addEventListener('click', function (){
   }
 })
 
-refresh.addEventListener('click', () => {
+refresh.addEventListener('click', () =>{
   window.location.reload()
 })
